@@ -1,4 +1,4 @@
 general:
 steps:
-    mtaBuild:
+  mtaBuild:
     buildTarget: 'CF'
