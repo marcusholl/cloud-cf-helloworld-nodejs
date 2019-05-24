@@ -7,4 +7,8 @@
     stage('build') {
       mtaBuild script: this
     }
+    stage('deploy') {
+        def mtarFilePath = commonPipelineEnvironment.getMtarFilePath()
+        cloudFoundryDeploy( script: this, mtaPath: mtarFilePath)
+    }
 }
